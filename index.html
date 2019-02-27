@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Which day of the week?</title>
+  <meta name="description" content="Which day of the week? is a website made for people who are trying to learn how to calculate the Day of the Week of a random date within seconds.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel='stylesheet' href='style.css' />
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light font-weight-bold">
+    <a href="./index.htm">Which day of the week?</a>
+  </nav>
+
+  <div id="container-level-choice" class="container text-center">
+    <h2>Choose a difficulty:</h2>
+
+    <a onclick="ask(1);"><button class="btn mb-2 btn-secondary" tabindex="-1">whole current year</button></a><br />
+    <a onclick="ask(2);"><button class="btn mb-2 btn-secondary" tabindex="-1">whole current year and whole next year</button></a><br />
+    <a onclick="ask(3);"><button class="btn mb-2 btn-secondary" tabindex="-1">2000 - 2099</button></a><br />
+    <a onclick="ask(4);"><button class="btn mb-2 btn-secondary" tabindex="-1">1900 - 2099</button></a><br />
+    <a onclick="ask(5);"><button class="btn mb-2 btn-secondary" tabindex="-1">1600 - 2099</button></a><br />
+    <a onclick="ask(6);"><button class="btn mb-2 btn-secondary" tabindex="-1">100 - 2999</button></a><br />
+
+    <div class="alert alert-info ml-4 mr-4 mt-3" role="alert" style="bottom: 0px;">
+      <h4>How it works:</h4>
+      <div class="text-left">
+        <b>1)</b> Choose a difficulty<br />
+        <b>2)</b> A date will show up.<br />
+        <b>3)</b> Press the button of the day of the week of that date or press one of the numbers on your keyboard (0 for Sunday, 1 for Monday, ..., 6 for Saturday).<br />
+        <b>4)</b> A text tells you if your answer is correct or not (and what the correct answer was).<br />
+        <b>5)</b> A new date will show up.<br />
+        ...<br /><br />
+        This website is made for people who are trying to learn how to <b>calculate the Day of the Week of a random date within seconds.</b>
+        <a href="https://www.wikihow.com/Calculate-the-Day-of-the-Week">https://www.wikihow.com/Calculate-the-Day-of-the-Week</a><br />
+        <a href="https://lifehacker.com/5848651/how-to-quickly-figure-out-the-day-of-the-week-any-date-falls-on">https://lifehacker.com/5848651/how-to-quickly-figure-out-the-day-of-the-week-any-date-falls-on</a><br />
+        <a href="https://blog.artofmemory.com/how-to-calculate-the-day-of-the-week-4203.html">https://blog.artofmemory.com/how-to-calculate-the-day-of-the-week-4203.html</a><br />
+        <a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week">https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week</a><br />
+        <a href="http://www.recordholders.org/en/records/dates.html">http://www.recordholders.org/en/records/dates.html</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="container-ask" class="container text-center" style="display: none;">
+    <div id="ask" style="min-height: 450px;">
+      <div id="dateSpan" class="alert alert-primary font-weight-bold ml-4 mr-4" role="alert" style="display: inline-block"></div>
+
+      <div style="margin-bottom: 5rem;">
+        <button class="btn btn-outline-primary" id="btnMonday">Monday</button>
+        <button class="btn btn-outline-primary" id="btnTuesday">Tuesday</button>
+        <button class="btn btn-outline-primary" id="btnWednesday">Wednesday</button>
+        <button class="btn btn-outline-primary" id="btnThursday">Thursday</button>
+        <button class="btn btn-outline-primary" id="btnFriday">Friday</button>
+        <button class="btn btn-outline-primary" id="btnSaturday">Saturday</button>
+        <button class="btn btn-outline-primary" id="btnSunday">Sunday</button>
+      </div>
+
+      <div id="alertCorrect" class="alert alert-success ml-4 mr-4" role="alert" style="display: none">
+        Correct!
+      </div>
+
+      <div id="alertWrong" class="alert alert-danger ml-4 mr-4" role="alert" style="display: none">
+        Wrong!
+      </div>
+
+      <button class="btn btn-primary" id="next" style="display: none;">Next</button>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

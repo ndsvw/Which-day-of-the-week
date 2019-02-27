@@ -1,0 +1,16 @@
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+nav {
+  margin-bottom: 2.5rem;
+}
+
+nav a{
+  color: black;
+}
