@@ -11,6 +11,11 @@ nav {
   margin-bottom: 2.5rem;
 }
 
-nav a{
+nav a {
   color: black;
+}
+
+#github-icon {
+  width: 32px;
+  height: 32px;
 }
