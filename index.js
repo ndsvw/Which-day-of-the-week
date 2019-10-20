@@ -70,11 +70,11 @@ const checkAnswer = (ans) => {
 	nextButton.style.display = 'inline';
 	nextButton.focus();
 	if (ans === currentDate.getDay()) {
-		alertCorrect.innerHTML = `Correct!<br />
+		alertCorrect.innerHTML = `<span style="font-size: 2.7em;">&#9989;</span><br />Correct!<br />
     Answer: ${ weekDayNames[ans] }`;
 		alertCorrect.style.display = 'block';
 	} else {
-		alertWrong.innerHTML = `Wrong!<br />
+		alertWrong.innerHTML = `<span style="font-size: 2.7em;">&#10060;</span><br />Wrong!<br />
     Date: ${ dateToString(currentDate) },<br />
     Your answer: ${ weekDayNames[ans] },<br />
     Correct answer: ${ weekDayNames[currentDate.getDay()] }`;
