@@ -9,6 +9,7 @@ h1 {
 
 nav {
   margin-bottom: 2.5rem;
+  border-bottom: 1px solid #BBBBBB;
 }
 
 nav a {
