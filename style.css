@@ -24,3 +24,31 @@ nav a {
 #tutorial {
   overflow-wrap: break-word;
 }
+
+#day-options-container {
+  display: grid;
+}
+
+.grid-item {
+  justify-self: stretch;
+}
+
+@media(min-width: 768px) {
+  #day-options-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 7px;
+  }
+
+}
+
+@media(max-width: 767px) {
+  #day-options-container {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 7px;
+  }
+
+  #day-options-container.result-alert-shown {
+    background-color: black;
+    display: none;
+  }
+}

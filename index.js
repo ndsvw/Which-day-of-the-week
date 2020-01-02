@@ -38,6 +38,7 @@ const alertCorrect = document.getElementById('alertCorrect');
 const alertWrong = document.getElementById('alertWrong');
 const dateSpan = document.getElementById('dateSpan');
 const nextButton = document.getElementById('next');
+const dayOptionsContainer = document.getElementById('day-options-container');
 
 const weekDayButtons = [
 	document.getElementById('btnSunday'),
@@ -59,6 +60,7 @@ const ask = (diff) => {
 const refresh = () => {
 	alertCorrect.style.display = 'none';
 	alertWrong.style.display = 'none';
+	dayOptionsContainer.classList.remove("result-alert-shown");
 	currentDate = getRandomDateByDifficulty();
 	dateSpan.innerHTML = dateToString(currentDate);
 };
@@ -80,6 +82,7 @@ const checkAnswer = (ans) => {
     Correct answer: ${ weekDayNames[currentDate.getDay()] }`;
 		alertWrong.style.display = 'block';
 	}
+	dayOptionsContainer.classList.add("result-alert-shown");
 };
 
 for (let i = 0; i < weekDayButtons.length; i++) {
