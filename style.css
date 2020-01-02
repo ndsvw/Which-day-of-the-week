@@ -20,3 +20,7 @@ nav a {
   width: 32px;
   height: 32px;
 }
+
+#tutorial {
+  overflow-wrap: break-word;
+}
